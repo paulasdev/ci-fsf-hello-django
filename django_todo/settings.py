@@ -15,6 +15,7 @@ import os
 import dj_database_url
 import env
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -84,9 +85,10 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 #     }
 # }
 
-DATABASE = {
-    'default': dj_databse_url.parse(os.environ.get('DATABASE_URL'))
+DATABASES = {
+   'default': dj_database_url.parse('postgres://xekooqbv:VZUMnw5vj9XVF07N_nq58fVWQLZegh19@tai.db.elephantsql.com/xekooqbv')
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
